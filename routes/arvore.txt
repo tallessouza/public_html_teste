@@ -1,0 +1,12 @@
+.
+├── api.php
+├── arvore.txt
+├── auth.php
+├── channels.php
+├── console.php
+├── extroutes
+├── panel.php
+├── webhooks.php
+└── web.php
+
+1 directory, 8 files

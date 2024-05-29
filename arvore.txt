@@ -1,0 +1,669 @@
+.
+├── arvore.txt
+├── dev_tools
+│   ├── ads.sql
+│   ├── ai_chat_image2.sql
+│   ├── ai_chat_image.sql
+│   ├── ai_filechat2.sql
+│   ├── ai_filechat.sql
+│   ├── ai_filter_rss.sql
+│   ├── ai_filter_voiceover.sql
+│   ├── ai_filter_youtube.sql
+│   ├── ai_pdf2.sql
+│   ├── ai_pdf.sql
+│   ├── ai_rewriter.sql
+│   ├── ai_rss.sql
+│   ├── ai_video.sql
+│   ├── ai_vision2.sql
+│   ├── ai_vision.sql
+│   ├── ai_voiceover.sql
+│   ├── ai_webchat2.sql
+│   ├── ai_webchat.sql
+│   ├── ai_wizard.sql
+│   ├── ai_youtube.sql
+│   ├── chatbot.sql
+│   ├── clients.sql
+│   ├── currency.sql
+│   ├── email_templates.sql
+│   ├── extensions
+│   │   ├── ai_template.sql
+│   │   ├── chat_setting_description.sql
+│   │   ├── chat_setting.sql
+│   │   ├── cloudflare_r2_description.sql
+│   │   ├── cloudflare_r2_price.sql
+│   │   ├── cloudflare_r2.sql
+│   │   ├── newsletter_description.sql
+│   │   ├── version.sql
+│   │   ├── webchat_description.sql
+│   │   ├── wordpress_description.sql
+│   │   ├── wordpress_price.sql
+│   │   └── wordpress.sql
+│   ├── faq.sql
+│   ├── frontend_future.sql
+│   ├── frontend_generators.sql
+│   ├── frontend_tools.sql
+│   ├── frontend_who_is_for.sql
+│   ├── health_check_result_history_items.sql
+│   ├── howitworks.sql
+│   ├── inner_pages.sql
+│   ├── integrations
+│   │   └── wordpress.sql
+│   ├── new_openai_table_templates.sql
+│   ├── openai_chat_categories_table.sql
+│   ├── openai_filters.sql
+│   ├── openai_table.sql
+│   ├── team_email_templates.sql
+│   └── testimonials.sql
+├── extensions
+├── lang
+│   ├── ar
+│   │   └── installer_messages.php
+│   ├── ar.json
+│   ├── da.json
+│   ├── de
+│   │   └── installer_messages.php
+│   ├── de.json
+│   ├── el.json
+│   ├── en
+│   │   ├── installer_messages.php
+│   │   └── laraupdater.php
+│   ├── es
+│   │   └── installer_messages.php
+│   ├── es.json
+│   ├── et
+│   │   └── installer_messages.php
+│   ├── fa
+│   │   └── installer_messages.php
+│   ├── fr
+│   │   └── installer_messages.php
+│   ├── fr.json
+│   ├── gr
+│   │   └── installer_messages.php
+│   ├── id
+│   │   └── installer_messages.php
+│   ├── id.json
+│   ├── it
+│   │   ├── installer_messages.php
+│   │   └── laraupdater.php
+│   ├── it.json
+│   ├── nl
+│   │   └── installer_messages.php
+│   ├── nl.json
+│   ├── pl
+│   │   └── installer_messages.php
+│   ├── pt
+│   │   └── installer_messages.php
+│   ├── pt-br
+│   │   └── installer_messages.php
+│   ├── pt_BR.json
+│   ├── ro
+│   │   └── installer_messages.php
+│   ├── ru
+│   │   └── installer_messages.php
+│   ├── sv.json
+│   ├── th
+│   │   └── installer_messages.php
+│   ├── th.json
+│   ├── tr
+│   │   └── installer_messages.php
+│   ├── zh-CN
+│   │   └── installer_messages.php
+│   └── zh-TW
+│       └── installer_messages.php
+└── views
+    ├── default
+    │   ├── blog
+    │   │   ├── app.blade.php
+    │   │   ├── footer.blade.php
+    │   │   ├── header.blade.php
+    │   │   ├── hero.blade.php
+    │   │   ├── index.blade.php
+    │   │   ├── part
+    │   │   │   ├── author.blade.php
+    │   │   │   ├── card.blade.php
+    │   │   │   ├── prev-next.blade.php
+    │   │   │   ├── related.blade.php
+    │   │   │   └── tag-share.blade.php
+    │   │   └── post.blade.php
+    │   ├── components
+    │   │   ├── accordion-item.blade.php
+    │   │   ├── alert.blade.php
+    │   │   ├── avatar.blade.php
+    │   │   ├── badge.blade.php
+    │   │   ├── bottom-menu.blade.php
+    │   │   ├── box.blade.php
+    │   │   ├── button.blade.php
+    │   │   ├── card.blade.php
+    │   │   ├── change-indicator.blade.php
+    │   │   ├── color-box.blade.php
+    │   │   ├── documents
+    │   │   │   ├── folder.blade.php
+    │   │   │   └── item.blade.php
+    │   │   ├── dropdown
+    │   │   │   ├── dropdown.blade.php
+    │   │   │   └── item.blade.php
+    │   │   ├── favorite-button.blade.php
+    │   │   ├── favorite-icon.blade.php
+    │   │   ├── floating-menu.blade.php
+    │   │   ├── forms
+    │   │   │   └── input.blade.php
+    │   │   ├── form-step.blade.php
+    │   │   ├── generator-item.blade.php
+    │   │   ├── header.blade.php
+    │   │   ├── header-search.blade.php
+    │   │   ├── info-tooltip.blade.php
+    │   │   ├── legend.blade.php
+    │   │   ├── light-dark-switch.blade.php
+    │   │   ├── lqd-icon.blade.php
+    │   │   ├── modal.blade.php
+    │   │   ├── navbar
+    │   │   │   ├── divider.blade.php
+    │   │   │   ├── dropdown
+    │   │   │   │   ├── dropdown.blade.php
+    │   │   │   │   ├── item.blade.php
+    │   │   │   │   └── link.blade.php
+    │   │   │   ├── extnavbars
+    │   │   │   ├── item.blade.php
+    │   │   │   ├── label.blade.php
+    │   │   │   ├── link.blade.php
+    │   │   │   ├── navbar.blade.php
+    │   │   │   └── partials
+    │   │   │       └── link-markup.blade.php
+    │   │   ├── price-table.blade.php
+    │   │   ├── remaining-credit.blade.php
+    │   │   ├── section-header.blade.php
+    │   │   ├── split-words.blade.php
+    │   │   ├── table.blade.php
+    │   │   ├── tabs-trigger.blade.php
+    │   │   ├── titlebar.blade.php
+    │   │   ├── total-docs.blade.php
+    │   │   └── warn.blade.php
+    │   ├── errors
+    │   │   ├── 404.blade.php
+    │   │   ├── 419.blade.php
+    │   │   ├── 500.blade.php
+    │   │   └── 503.blade.php
+    │   ├── index.blade.php
+    │   ├── js
+    │   │   ├── app.js
+    │   │   ├── bootstrap.js
+    │   │   └── youtubeTranscript.js
+    │   ├── landing-page
+    │   │   ├── banner
+    │   │   │   └── section.blade.php
+    │   │   ├── blog
+    │   │   │   └── section.blade.php
+    │   │   ├── custom-templates
+    │   │   │   ├── item.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── faq
+    │   │   │   ├── item.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── features
+    │   │   │   ├── item.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── gdpr.blade.php
+    │   │   ├── generators
+    │   │   │   ├── item-content.blade.php
+    │   │   │   ├── item-trigger.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── header
+    │   │   │   ├── envato-link.blade.php
+    │   │   │   ├── floating-button.blade.php
+    │   │   │   └── preheader.blade.php
+    │   │   ├── how-it-works
+    │   │   │   ├── item.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── pricing
+    │   │   │   ├── item-content.blade.php
+    │   │   │   ├── item-trigger.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── testimonials
+    │   │   │   ├── item-image.blade.php
+    │   │   │   ├── item-quote.blade.php
+    │   │   │   └── section.blade.php
+    │   │   ├── tools
+    │   │   │   ├── item.blade.php
+    │   │   │   └── section.blade.php
+    │   │   └── who-is-for
+    │   │       ├── item.blade.php
+    │   │       └── section.blade.php
+    │   ├── layout
+    │   │   ├── app.blade.php
+    │   │   ├── error.blade.php
+    │   │   ├── footer.blade.php
+    │   │   └── header.blade.php
+    │   ├── mail
+    │   │   ├── confirmation.blade.php
+    │   │   ├── invite.blade.php
+    │   │   ├── reset.blade.php
+    │   │   ├── send-email.blade.php
+    │   │   └── team-invite.blade.php
+    │   ├── page
+    │   │   └── index.blade.php
+    │   ├── panel
+    │   │   ├── admin
+    │   │   │   ├── adsense
+    │   │   │   │   ├── edit.blade.php
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── advertis
+    │   │   │   │   ├── edit.blade.php
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── affiliate
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── banktransfer
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── chatbot
+    │   │   │   │   ├── form.blade.php
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   ├── particles
+    │   │   │   │   │   ├── pdf
+    │   │   │   │   │   │   └── list.blade.php
+    │   │   │   │   │   ├── pdf-tab.blade.php
+    │   │   │   │   │   ├── qa
+    │   │   │   │   │   │   └── list.blade.php
+    │   │   │   │   │   ├── qa-tab.blade.php
+    │   │   │   │   │   ├── text
+    │   │   │   │   │   │   └── list.blade.php
+    │   │   │   │   │   ├── text-tab.blade.php
+    │   │   │   │   │   ├── web-site
+    │   │   │   │   │   │   └── crawler.blade.php
+    │   │   │   │   │   └── web-site-tab.blade.php
+    │   │   │   │   ├── setting.blade.php
+    │   │   │   │   ├── status.blade.php
+    │   │   │   │   └── training.blade.php
+    │   │   │   ├── clients
+    │   │   │   │   ├── ClientNewOrEdit.blade.php
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── coupons
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   └── used.blade.php
+    │   │   │   ├── custom
+    │   │   │   │   └── automation
+    │   │   │   ├── finance
+    │   │   │   │   ├── free-feature.blade.php
+    │   │   │   │   ├── gateways
+    │   │   │   │   │   ├── index.blade.php
+    │   │   │   │   │   └── settings.blade.php
+    │   │   │   │   ├── mobile
+    │   │   │   │   │   └── index.blade.php
+    │   │   │   │   └── plans
+    │   │   │   │       ├── currency.blade.php
+    │   │   │   │       ├── index.blade.php
+    │   │   │   │       ├── PrepaidNewOrEdit.blade.php
+    │   │   │   │       └── SubscriptionNewOrEdit.blade.php
+    │   │   │   ├── frontend
+    │   │   │   │   ├── auth.blade.php
+    │   │   │   │   ├── faq
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── index.blade.php
+    │   │   │   │   ├── future
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── index.blade.php
+    │   │   │   │   ├── generators_list
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── index.blade.php
+    │   │   │   │   ├── menu.blade.php
+    │   │   │   │   ├── section_settings.blade.php
+    │   │   │   │   ├── settings.blade.php
+    │   │   │   │   ├── tools
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── index.blade.php
+    │   │   │   │   └── who_is_for
+    │   │   │   │       ├── form.blade.php
+    │   │   │   │       └── index.blade.php
+    │   │   │   ├── health
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   └── logs.blade.php
+    │   │   │   ├── howitworks
+    │   │   │   │   ├── HowitWorksNewOrEdit.blade.php
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── index.blade.php
+    │   │   │   ├── license
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── market
+    │   │   │   │   ├── buyextension.blade.php
+    │   │   │   │   ├── components
+    │   │   │   │   │   └── marketplace-filter.blade.php
+    │   │   │   │   ├── extensionactivate.blade.php
+    │   │   │   │   ├── extension.blade.php
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   └── liextension.blade.php
+    │   │   │   ├── marketplace
+    │   │   │   │   ├── activate.blade.php
+    │   │   │   │   ├── components
+    │   │   │   │   │   └── marketplace-filter.blade.php
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   ├── licensed.blade.php
+    │   │   │   │   ├── payment.blade.php
+    │   │   │   │   └── show.blade.php
+    │   │   │   ├── openai
+    │   │   │   │   ├── categories
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── list.blade.php
+    │   │   │   │   ├── chat
+    │   │   │   │   │   ├── category
+    │   │   │   │   │   │   └── template.blade.php
+    │   │   │   │   │   ├── category.blade.php
+    │   │   │   │   │   ├── document
+    │   │   │   │   │   │   └── pdf.blade.php
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── list.blade.php
+    │   │   │   │   ├── custom
+    │   │   │   │   │   ├── form.blade.php
+    │   │   │   │   │   └── list.blade.php
+    │   │   │   │   └── list.blade.php
+    │   │   │   ├── settings
+    │   │   │   │   ├── affiliate.blade.php
+    │   │   │   │   ├── anthropic.blade.php
+    │   │   │   │   ├── countries.blade.php
+    │   │   │   │   ├── currencies.blade.php
+    │   │   │   │   ├── gdpr.blade.php
+    │   │   │   │   ├── general.blade.php
+    │   │   │   │   ├── invoice.blade.php
+    │   │   │   │   ├── languages.blade.php
+    │   │   │   │   ├── openai.blade.php
+    │   │   │   │   ├── privacy.blade.php
+    │   │   │   │   ├── serperapi.blade.php
+    │   │   │   │   ├── smtp.blade.php
+    │   │   │   │   ├── stable_diffusion.blade.php
+    │   │   │   │   ├── stablediffusion.blade.php
+    │   │   │   │   ├── storage.blade.php
+    │   │   │   │   ├── stripe.blade.php
+    │   │   │   │   ├── thumbnail.blade.php
+    │   │   │   │   ├── tts.blade.php
+    │   │   │   │   └── unsplashapi.blade.php
+    │   │   │   ├── testimonials
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   └── TestimonialNewOrEdit.blade.php
+    │   │   │   ├── themes
+    │   │   │   │   ├── activate.blade.php
+    │   │   │   │   ├── buy.blade.php
+    │   │   │   │   ├── index.blade.php
+    │   │   │   │   └── themeactivate.blade.php
+    │   │   │   ├── update
+    │   │   │   │   └── index.blade.php
+    │   │   │   ├── users
+    │   │   │   │   ├── components
+    │   │   │   │   │   └── users-table.blade.php
+    │   │   │   │   ├── countries.blade.php
+    │   │   │   │   ├── create.blade.php
+    │   │   │   │   ├── edit.blade.php
+    │   │   │   │   ├── finance.blade.php
+    │   │   │   │   └── index.blade.php
+    │   │   │   └── voice
+    │   │   │       ├── edit.blade.php
+    │   │   │       └── index.blade.php
+    │   │   ├── authentication
+    │   │   │   ├── layout
+    │   │   │   │   └── app.blade.php
+    │   │   │   ├── login.blade.php
+    │   │   │   ├── password_reset.blade.php
+    │   │   │   ├── password_reset_final.blade.php
+    │   │   │   └── register.blade.php
+    │   │   ├── blog
+    │   │   │   ├── form.blade.php
+    │   │   │   └── list.blade.php
+    │   │   ├── chatbot
+    │   │   │   ├── form.blade.php
+    │   │   │   ├── index.blade.php
+    │   │   │   ├── widget.blade.php
+    │   │   │   └── widget-coming-soon.blade.php
+    │   │   ├── email
+    │   │   │   ├── form.blade.php
+    │   │   │   ├── list.blade.php
+    │   │   │   └── send.blade.php
+    │   │   ├── layout
+    │   │   │   ├── app.blade.php
+    │   │   │   ├── components
+    │   │   │   │   └── search_results.blade.php
+    │   │   │   ├── footer.blade.php
+    │   │   │   ├── header.blade.php
+    │   │   │   ├── navbar.blade.php
+    │   │   │   ├── scripts.blade.php
+    │   │   │   ├── settings.blade.php
+    │   │   │   └── titlebar.blade.php
+    │   │   ├── page
+    │   │   │   ├── form.blade.php
+    │   │   │   └── list.blade.php
+    │   │   ├── support
+    │   │   │   ├── list.blade.php
+    │   │   │   ├── new.blade.php
+    │   │   │   └── view.blade.php
+    │   │   └── user
+    │   │       ├── affiliate
+    │   │       │   ├── index.blade.php
+    │   │       │   └── users.blade.php
+    │   │       ├── apiKeys
+    │   │       │   └── index.blade.php
+    │   │       ├── article_wizard
+    │   │       │   ├── components
+    │   │       │   │   └── wizard_settings.blade.php
+    │   │       │   └── wizard.blade.php
+    │   │       ├── companies
+    │   │       │   ├── form.blade.php
+    │   │       │   └── list.blade.php
+    │   │       ├── dashboard.blade.php
+    │   │       ├── finance
+    │   │       │   ├── coupon
+    │   │       │   │   └── index.blade.php
+    │   │       │   ├── ongoingPayments.blade.php
+    │   │       │   ├── partials
+    │   │       │   │   └── plan_card.blade.php
+    │   │       │   ├── prepaid
+    │   │       │   │   ├── banktransfer.blade.php
+    │   │       │   │   ├── coingate.blade.php
+    │   │       │   │   ├── freeservice.blade.php
+    │   │       │   │   ├── iyzico
+    │   │       │   │   │   ├── pay.blade.php
+    │   │       │   │   │   ├── pre.blade.php
+    │   │       │   │   │   └── result.blade.php
+    │   │       │   │   ├── paddle.blade.php
+    │   │       │   │   ├── paypal.blade.php
+    │   │       │   │   ├── paystack.blade.php
+    │   │       │   │   ├── razorpay.blade.php
+    │   │       │   │   ├── stripe.blade.php
+    │   │       │   │   └── yokassa.blade.php
+    │   │       │   ├── subscription
+    │   │       │   │   ├── banktransfer.blade.php
+    │   │       │   │   ├── coingate.blade.php
+    │   │       │   │   ├── freeservice.blade.php
+    │   │       │   │   ├── iyzico
+    │   │       │   │   │   ├── pay.blade.php
+    │   │       │   │   │   ├── pre.blade.php
+    │   │       │   │   │   └── result.blade.php
+    │   │       │   │   ├── paddle.blade.php
+    │   │       │   │   ├── paypal.blade.php
+    │   │       │   │   ├── paystack.blade.php
+    │   │       │   │   ├── razorpay.blade.php
+    │   │       │   │   ├── stripe.blade.php
+    │   │       │   │   └── yokassa.blade.php
+    │   │       │   ├── subscriptionPlans.blade.php
+    │   │       │   ├── subscriptionStatus.blade.php
+    │   │       │   └── succesful.blade.php
+    │   │       ├── generator
+    │   │       │   ├── components
+    │   │       │   │   ├── editor-actions-top-bar.blade.php
+    │   │       │   │   ├── editor.blade.php
+    │   │       │   │   ├── generator-options.blade.php
+    │   │       │   │   └── sidebar.blade.php
+    │   │       │   └── index.blade.php
+    │   │       ├── integration
+    │   │       │   ├── documents_workbook.blade.php
+    │   │       │   ├── edit.blade.php
+    │   │       │   └── index.blade.php
+    │   │       ├── openai
+    │   │       │   ├── components
+    │   │       │   │   ├── countries.blade.php
+    │   │       │   │   ├── generator_image.blade.php
+    │   │       │   │   ├── generator_image_dalle_options.blade.php
+    │   │       │   │   ├── generator_image_stablediffusion_options.blade.php
+    │   │       │   │   ├── generator_others.blade.php
+    │   │       │   │   ├── generator_sidebar_table.blade.php
+    │   │       │   │   ├── generator_video.blade.php
+    │   │       │   │   ├── generator_voiceover.blade.php
+    │   │       │   │   ├── modals
+    │   │       │   │   │   ├── create-new-folder.blade.php
+    │   │       │   │   │   ├── delete-folder.blade.php
+    │   │       │   │   │   ├── move-to-folder.blade.php
+    │   │       │   │   │   └── rename-folder.blade.php
+    │   │       │   │   └── workbook-actions.blade.php
+    │   │       │   ├── documents.blade.php
+    │   │       │   ├── documents_container.blade.php
+    │   │       │   ├── documents_empty.blade.php
+    │   │       │   ├── documents_list.blade.php
+    │   │       │   ├── documents_workbook.blade.php
+    │   │       │   ├── documents_workbook_textarea.blade.php
+    │   │       │   ├── generator.blade.php
+    │   │       │   ├── generator_workbook.blade.php
+    │   │       │   ├── list.blade.php
+    │   │       │   └── rewriter
+    │   │       │       └── index.blade.php
+    │   │       ├── openai_chat
+    │   │       │   ├── chat.blade.php
+    │   │       │   ├── components
+    │   │       │   │   ├── chat_area.blade.php
+    │   │       │   │   ├── chat_area_container.blade.php
+    │   │       │   │   ├── chat_form.blade.php
+    │   │       │   │   ├── chat_head.blade.php
+    │   │       │   │   ├── chat_js.blade.php
+    │   │       │   │   ├── chat_sidebar.blade.php
+    │   │       │   │   ├── chat_sidebar_list.blade.php
+    │   │       │   │   ├── list.blade.php
+    │   │       │   │   ├── prompt_library_list.blade.php
+    │   │       │   │   └── prompt_library_modal.blade.php
+    │   │       │   ├── list.blade.php
+    │   │       │   └── vision.blade.php
+    │   │       ├── orders
+    │   │       │   ├── index.blade.php
+    │   │       │   └── invoice.blade.php
+    │   │       ├── payment
+    │   │       │   ├── prepaid
+    │   │       │   │   └── payWithTwoCheckout.blade.php
+    │   │       │   └── subscription
+    │   │       │       └── payWithTwoCheckout.blade.php
+    │   │       ├── settings
+    │   │       │   └── index.blade.php
+    │   │       └── team
+    │   │           ├── edit.blade.php
+    │   │           ├── index.blade.php
+    │   │           └── partials
+    │   │               ├── invite-a-friend.blade.php
+    │   │               ├── overview.blade.php
+    │   │               └── team-members.blade.php
+    │   ├── premium-support
+    │   │   ├── components
+    │   │   │   ├── feature-1.blade.php
+    │   │   │   ├── feature-2.blade.php
+    │   │   │   ├── feature-3.blade.php
+    │   │   │   ├── footer.blade.php
+    │   │   │   ├── header.blade.php
+    │   │   │   └── hero.blade.php
+    │   │   └── index.blade.php
+    │   ├── scss
+    │   │   ├── base
+    │   │   │   ├── base.scss
+    │   │   │   ├── typography.scss
+    │   │   │   └── vars.scss
+    │   │   ├── components
+    │   │   │   ├── apex-chart.scss
+    │   │   │   ├── audio.scss
+    │   │   │   ├── avatar.scss
+    │   │   │   ├── badge.scss
+    │   │   │   ├── button.scss
+    │   │   │   ├── card.scss
+    │   │   │   ├── chat-item.scss
+    │   │   │   ├── chats-list.scss
+    │   │   │   ├── chats.scss
+    │   │   │   ├── components.scss
+    │   │   │   ├── custom.scss
+    │   │   │   ├── document-item.scss
+    │   │   │   ├── documents-container.scss
+    │   │   │   ├── favorite-button.scss
+    │   │   │   ├── filter-list.scss
+    │   │   │   ├── floating-menu.scss
+    │   │   │   ├── folder.scss
+    │   │   │   ├── form.scss
+    │   │   │   ├── generator-item.scss
+    │   │   │   ├── generators-container.scss
+    │   │   │   ├── generators.scss
+    │   │   │   ├── image-generator.scss
+    │   │   │   ├── loader.scss
+    │   │   │   ├── marketplace.scss
+    │   │   │   ├── modal_popover.scss
+    │   │   │   ├── pagination.scss
+    │   │   │   ├── popover.scss
+    │   │   │   ├── progress-bar.scss
+    │   │   │   ├── skeleton.scss
+    │   │   │   ├── table.scss
+    │   │   │   ├── tab.scss
+    │   │   │   ├── tinymce.scss
+    │   │   │   ├── toastr.scss
+    │   │   │   └── typing.scss
+    │   │   ├── dashboard.scss
+    │   │   ├── landing-page.scss
+    │   │   ├── layout
+    │   │   │   ├── errors.scss
+    │   │   │   ├── header.scss
+    │   │   │   ├── layout.scss
+    │   │   │   ├── navbar.scss
+    │   │   │   └── titlebar.scss
+    │   │   ├── panel
+    │   │   │   ├── auth.scss
+    │   │   │   ├── generator.scss
+    │   │   │   ├── page-header.scss
+    │   │   │   └── panel.scss
+    │   │   └── single-page
+    │   │       └── single-page.scss
+    │   ├── test
+    │   │   └── theme.json
+    │   └── theme.json
+    └── vendor
+        ├── installer
+        │   ├── env_file_editor.blade.php
+        │   ├── environment.blade.php
+        │   ├── environment-classic.blade.php
+        │   ├── environment-wizard.blade.php
+        │   ├── finished.blade.php
+        │   ├── layouts
+        │   │   ├── master.blade.php
+        │   │   └── master-update.blade.php
+        │   ├── license.blade.php
+        │   ├── magicai_c4st_Act.blade.php
+        │   ├── magicai_license_token.blade.php
+        │   ├── permissions.blade.php
+        │   ├── requirements.blade.php
+        │   ├── update
+        │   │   ├── finished.blade.php
+        │   │   ├── overview.blade.php
+        │   │   └── welcome.blade.php
+        │   └── welcome.blade.php
+        ├── l5-swagger
+        │   └── index.blade.php
+        ├── langs
+        │   ├── home.blade.php
+        │   ├── includes
+        │   │   ├── messages.blade.php
+        │   │   ├── nav.blade.php
+        │   │   └── tools.blade.php
+        │   ├── lang.blade.php
+        │   ├── layouts
+        │   │   └── app.blade.php
+        │   ├── list.blade.php
+        │   └── search_result.blade.php
+        ├── laraupdater
+        │   └── notification.blade.php
+        └── pagination
+            ├── ajax.blade.php
+            ├── bootstrap-4.blade.php
+            ├── bootstrap-5-alt.blade.php
+            ├── bootstrap-5.blade.php
+            ├── default.blade.php
+            ├── semantic-ui.blade.php
+            ├── simple-bootstrap-4.blade.php
+            ├── simple-bootstrap-5.blade.php
+            ├── simple-default.blade.php
+            ├── simple-tailwind.blade.php
+            └── tailwind.blade.php
+
+158 directories, 508 files

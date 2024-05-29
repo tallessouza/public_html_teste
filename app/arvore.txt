@@ -1,0 +1,356 @@
+.
+├── arvore.txt
+├── Console
+│   ├── Commands
+│   │   ├── CheckCoingateCommand.php
+│   │   ├── CheckRazorpayCommand.php
+│   │   ├── CheckSubscriptionEnd.php
+│   │   └── CheckYookassaCommand.php
+│   └── Kernel.php
+├── Events
+│   ├── BankTransferEvent.php
+│   ├── FreePaymentEvent.php
+│   ├── IyzicoLifetimeEvent.php
+│   ├── IyzicoWebhookEvent.php
+│   ├── PaypalLifetimeEvent.php
+│   ├── PaypalWebhookEvent.php
+│   ├── PaystackLifetimeEvent.php
+│   ├── PaystackWebhookEvent.php
+│   ├── StripeLifetimeEvent.php
+│   ├── StripeWebhookEvent.php
+│   ├── TwoCheckoutWebhookEvent.php
+│   └── YokassaWebhookEvent.php
+├── Exceptions
+│   └── Handler.php
+├── Helpers
+│   ├── Classes
+│   │   ├── Helper.php
+│   │   ├── InstallationHelper.php
+│   │   └── OpenAiHelper.php
+│   └── helpers.php
+├── Http
+│   ├── Controllers
+│   │   ├── AdsController.php
+│   │   ├── AdvertisController.php
+│   │   ├── AIArticleWizardController.php
+│   │   ├── AIChatController.php
+│   │   ├── AIController.php
+│   │   ├── AIFineTuneController.php
+│   │   ├── Api
+│   │   │   ├── AffiliateApiController.php
+│   │   │   ├── AIChatController.php
+│   │   │   ├── AIController.php
+│   │   │   ├── AIWriterController.php
+│   │   │   ├── AppController.php
+│   │   │   ├── AuthController.php
+│   │   │   ├── ChatTemplatesController.php
+│   │   │   ├── DocumentsApiController.php
+│   │   │   ├── PaymentApiController.php
+│   │   │   ├── SocialLoginController.php
+│   │   │   ├── UserController.php
+│   │   │   └── UserSupportApiController.php
+│   │   ├── Auth
+│   │   │   ├── AuthenticatedSessionController.php
+│   │   │   ├── AuthenticationController.php
+│   │   │   ├── ConfirmablePasswordController.php
+│   │   │   ├── EmailVerificationNotificationController.php
+│   │   │   ├── EmailVerificationPromptController.php
+│   │   │   ├── NewPasswordController.php
+│   │   │   ├── PasswordController.php
+│   │   │   ├── PasswordResetLinkController.php
+│   │   │   ├── RegisteredUserController.php
+│   │   │   └── VerifyEmailController.php
+│   │   ├── BlogController.php
+│   │   ├── Chatbot
+│   │   │   ├── ChatbotController.php
+│   │   │   └── ChatbotTrainingController.php
+│   │   ├── ChatBotController.php
+│   │   ├── ChatPdfController.php
+│   │   ├── Common
+│   │   │   ├── CommonController.php
+│   │   │   └── HealthController.php
+│   │   ├── Controller.php
+│   │   ├── Dashboard
+│   │   │   ├── AdminController.php
+│   │   │   ├── BrandController.php
+│   │   │   ├── SearchController.php
+│   │   │   ├── SettingsController.php
+│   │   │   ├── SupportController.php
+│   │   │   ├── TranslateController.php
+│   │   │   └── UserController.php
+│   │   ├── EmailTemplatesController.php
+│   │   ├── ExportChatController.php
+│   │   ├── FavouriteController.php
+│   │   ├── Finance
+│   │   │   ├── GatewayController.php
+│   │   │   ├── MobilePaymentsController.php
+│   │   │   └── PaymentProcessController.php
+│   │   ├── IndexController.php
+│   │   ├── InstallationController.php
+│   │   ├── Integration
+│   │   │   └── IntegrationController.php
+│   │   ├── magicaiUpdaterController.php
+│   │   ├── MailController.php
+│   │   ├── Market
+│   │   │   └── MarketPlaceController.php
+│   │   ├── OpenAi
+│   │   │   └── GeneratorController.php
+│   │   ├── PageController.php
+│   │   ├── PremiumSupportController.php
+│   │   ├── PromptController.php
+│   │   ├── Team
+│   │   │   └── TeamController.php
+│   │   ├── TestController.php
+│   │   ├── Themes
+│   │   │   └── ThemeController.php
+│   │   ├── TTSController.php
+│   │   ├── User
+│   │   │   └── Chatbot
+│   │   └── Voice
+│   │       └── ElevenlabVoiceController.php
+│   ├── Kernel.php
+│   ├── Middleware
+│   │   ├── Authenticate.php
+│   │   ├── CheckInstallation.php
+│   │   ├── CheckTemplateTypeAndPlan.php
+│   │   ├── EncryptCookies.php
+│   │   ├── hasImageTokens.php
+│   │   ├── hasTokens.php
+│   │   ├── hasWordTokens.php
+│   │   ├── isAdmin.php
+│   │   ├── PreventRequestsDuringMaintenance.php
+│   │   ├── RedirectIfAuthenticated.php
+│   │   ├── TrimStrings.php
+│   │   ├── TrustHosts.php
+│   │   ├── TrustProxies.php
+│   │   ├── ValidateSignature.php
+│   │   ├── VerifyCsrfToken.php
+│   │   └── ViewSharedMiddleware.php
+│   └── Requests
+│       ├── Auth
+│       │   └── LoginRequest.php
+│       ├── Chatbot
+│       │   ├── ChatbotRequest.php
+│       │   ├── ChatbotSettingRequest.php
+│       │   └── ChatbotTrainingRequest.php
+│       ├── ProfileUpdateRequest.php
+│       └── Team
+│           └── TeamInviteRequest.php
+├── Jobs
+│   ├── CancelAwaitingPaymentSubscriptions.php
+│   ├── ProcessRazorpayCustomerJob.php
+│   ├── ProcessStripeCustomerJob.php
+│   ├── SendConfirmationEmail.php
+│   ├── SendEmail.php
+│   ├── SendInviteEmail.php
+│   ├── SendPasswordResetEmail.php
+│   ├── SendTeamInviteEmail.php
+│   └── Voice
+│       └── ElevenlabVoiceCreateJob.php
+├── Listeners
+│   ├── BankTransferListener.php
+│   ├── FreePaymentListener.php
+│   ├── IyzicoLifetimeListener.php
+│   ├── IyzicoWebhookListener.php
+│   ├── PaypalLifetimeListener.php
+│   ├── PaypalWebhookListener.php
+│   ├── PaystackLifetimeListener.php
+│   ├── PaystackWebhookListener.php
+│   ├── StripeLifetimeListener.php
+│   ├── StripeWebhookListener.php
+│   ├── TwoCheckoutWebhookListener.php
+│   └── YokassaWebhookListener.php
+├── Mail
+│   ├── ConfirmationEmail.php
+│   ├── InviteEmail.php
+│   ├── InviteTeamEmail.php
+│   ├── PasswordResetEmail.php
+│   └── SendEmail.php
+├── Models
+│   ├── Activity.php
+│   ├── Ad.php
+│   ├── Advertis.php
+│   ├── ArticleWizard.php
+│   ├── BadWord.php
+│   ├── Blog.php
+│   ├── Chatbot
+│   │   ├── ChatbotData.php
+│   │   ├── ChatbotDataVector.php
+│   │   └── Chatbot.php
+│   ├── ChatBotHistory.php
+│   ├── ChatCategory.php
+│   ├── Clients.php
+│   ├── Company.php
+│   ├── Coupon.php
+│   ├── Currency.php
+│   ├── CustomBilingPlans.php
+│   ├── CustomSettings.php
+│   ├── EmailTemplates.php
+│   ├── Extension.php
+│   ├── Faq.php
+│   ├── Favourite.php
+│   ├── Folders.php
+│   ├── FrontendForWho.php
+│   ├── FrontendFuture.php
+│   ├── FrontendGenerators.php
+│   ├── FrontendSectionsStatusses.php
+│   ├── FrontendSetting.php
+│   ├── FrontendTools.php
+│   ├── GatewayProducts.php
+│   ├── Gateways.php
+│   ├── HowitWorks.php
+│   ├── Integration
+│   │   ├── Integration.php
+│   │   └── UserIntegration.php
+│   ├── Jobs.php
+│   ├── OldGatewayProducts.php
+│   ├── OpenaiGeneratorChatCategory.php
+│   ├── OpenaiGeneratorFilter.php
+│   ├── OpenAIGenerator.php
+│   ├── Page.php
+│   ├── PaymentPlans.php
+│   ├── PaymentProof.php
+│   ├── PaystackPaymentInfo.php
+│   ├── PdfData.php
+│   ├── PrivacyTerms.php
+│   ├── Product.php
+│   ├── Prompt.php
+│   ├── RateLimit.php
+│   ├── RevenueCatProducts.php
+│   ├── Setting.php
+│   ├── SettingTwo.php
+│   ├── SubscriptionItems.php
+│   ├── Subscriptions.php
+│   ├── Team
+│   │   ├── TeamMember.php
+│   │   └── Team.php
+│   ├── Testimonials.php
+│   ├── TwoCheckoutSubscriptions.php
+│   ├── Usage.php
+│   ├── UserAffiliate.php
+│   ├── UserDocsFavorite.php
+│   ├── UserFavorite.php
+│   ├── UserOpenaiChatMessage.php
+│   ├── UserOpenaiChat.php
+│   ├── UserOpenai.php
+│   ├── UserOrder.php
+│   ├── User.php
+│   ├── UserSupportMessage.php
+│   ├── UserSupport.php
+│   ├── Voice
+│   │   └── ElevenlabVoice.php
+│   ├── WebhookHistory.php
+│   └── YokassaSubscriptions.php
+├── Policies
+│   └── ModelPolicy.php
+├── Providers
+│   ├── AppServiceProvider.php
+│   ├── AuthServiceProvider.php
+│   ├── BroadcastServiceProvider.php
+│   ├── EventServiceProvider.php
+│   ├── MacrosServiceProvider.php
+│   ├── RouteServiceProvider.php
+│   └── ViewServiceProvider.php
+├── Repositories
+│   ├── Contracts
+│   │   ├── ExtensionRepositoryInterface.php
+│   │   └── PortalRepositoryInterface.php
+│   └── ExtensionRepository.php
+├── Rules
+│   └── Team
+│       └── TeamInviteRule.php
+├── Services
+│   ├── AdsenseService.php
+│   ├── Ai
+│   │   └── Anthropic.php
+│   ├── BadWord.php
+│   ├── Chatbot
+│   │   ├── LinkCrawler.php
+│   │   └── ParserService.php
+│   ├── Contracts
+│   │   └── BaseGatewayService.php
+│   ├── Extension
+│   │   ├── ExtensionService.php
+│   │   └── Traits
+│   │       ├── InstallExtension.php
+│   │       └── UninstallExtension.php
+│   ├── GatewaySelector.php
+│   ├── MemoryLimit.php
+│   ├── PaymentGateways
+│   │   ├── CoinBaseService.php
+│   │   ├── CoingateService.php
+│   │   ├── FreeService.php
+│   │   ├── IyzicoService.php
+│   │   ├── Libraries
+│   │   │   └── IyzipayActions.php
+│   │   ├── PaddleService.php
+│   │   ├── PayPalService.php
+│   │   ├── PaystackService.php
+│   │   ├── RazorpayService.php
+│   │   ├── RevenueCatService.php
+│   │   ├── StripeService.php
+│   │   ├── TransferService.php
+│   │   ├── TwocheckoutService.php
+│   │   ├── WalletmaxpayService.php
+│   │   └── YokassaService.php
+│   ├── StableDiffusion.php
+│   ├── Theme
+│   │   ├── ThemeService.php
+│   │   └── Traits
+│   │       ├── InstallTheme.php
+│   │       └── UninstallTheme.php
+│   └── VectorService.php
+└── View
+    └── Components
+        ├── AccordionItem.php
+        ├── Alert.php
+        ├── AppLayout.php
+        ├── Avatar.php
+        ├── Badge.php
+        ├── BottomMenu.php
+        ├── Box.php
+        ├── Button.php
+        ├── Card.php
+        ├── ChangeIndicator.php
+        ├── ColorBox.php
+        ├── Documents
+        │   ├── Folder.php
+        │   └── Item.php
+        ├── Dropdown
+        │   ├── Dropdown.php
+        │   └── Item.php
+        ├── FavoriteButton.php
+        ├── FavoriteIcon.php
+        ├── FloatingMenu.php
+        ├── Forms
+        │   └── Input.php
+        ├── FormStep.php
+        ├── GeneratorItem.php
+        ├── GuestLayout.php
+        ├── Header.php
+        ├── HeaderSearch.php
+        ├── InfoTooltip.php
+        ├── Legend.php
+        ├── LightDarkSwitch.php
+        ├── LqdIcon.php
+        ├── Modal.php
+        ├── Navbar
+        │   ├── Divider.php
+        │   ├── Dropdown
+        │   │   ├── Dropdown.php
+        │   │   ├── Item.php
+        │   │   └── Link.php
+        │   ├── Item.php
+        │   ├── Label.php
+        │   ├── Link.php
+        │   └── Navbar.php
+        ├── PriceTable.php
+        ├── RemainingCredit.php
+        ├── SectionHeader.php
+        ├── SplitWords.php
+        ├── Table.php
+        ├── TabsTrigger.php
+        ├── Titlebar.php
+        └── TotalDocs.php
+
+59 directories, 294 files

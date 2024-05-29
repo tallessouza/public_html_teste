@@ -1,0 +1,3 @@
+[29-May-2024 05:21:27 UTC] Xdebug: [Log Files] File '/home/username/xdebug.log' could not be opened.
+[29-May-2024 05:21:27 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port).
+[29-May-2024 05:21:28 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port).

@@ -1,0 +1,17 @@
+{
+  "resources/views/default/js/app.js": {
+    "file": "assets/app-6b9138dc.js",
+    "isEntry": true,
+    "src": "resources/views/default/js/app.js"
+  },
+  "resources/views/default/scss/dashboard.scss": {
+    "file": "assets/dashboard-993fcb51.css",
+    "isEntry": true,
+    "src": "resources/views/default/scss/dashboard.scss"
+  },
+  "resources/views/default/scss/landing-page.scss": {
+    "file": "assets/landing-page-af10c421.css",
+    "isEntry": true,
+    "src": "resources/views/default/scss/landing-page.scss"
+  }
+}
