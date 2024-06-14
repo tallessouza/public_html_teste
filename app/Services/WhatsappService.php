@@ -8,11 +8,33 @@ class WhatsappService
 {
     protected $apiKey;
     protected $baseUrl;
+    protected $mainInstance;
+    protected $webHook;
 
     public function __construct()
     {
-        $this->apiKey = 'Ogo5DapE+qKn7IGEUpQSN2zQVqHeuFl8FgBsoOtxG40o+NwgASIbU+Xi';
-        $this->baseUrl = 'http://84.247.174.15:8081';
+        $this->apiKey = env('EVO_APIKEY');
+        $this->baseUrl = env('EVO_URL');
+        $this->mainInstance = env('EVO_MAININSTANCE');
+        $this->webHook = env('EVO_WEBHOOK');
+    }
+
+    public function checkInstanceState()
+    {
+        try {
+            $response = Http::withHeaders([
+                'apikey' => $this->apiKey
+            ])->get("{$this->baseUrl}/instance/connectionState/{$this->mainInstance}");
+
+            if ($response->successful()) {
+                $data = $response->json();
+                return isset($data['instance']) && $data['instance']['state'] === 'open';
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+
+        return false;
     }
 
     public function isWhatsAppNumber($phone)
@@ -20,7 +42,7 @@ class WhatsappService
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             'apikey' => $this->apiKey
-        ])->post("{$this->baseUrl}/chat/whatsappNumbers/5564999425822", [
+        ])->post("{$this->baseUrl}/chat/whatsappNumbers/{$this->mainInstance}", [
             'numbers' => [$phone]
         ]);
 
@@ -69,7 +91,7 @@ class WhatsappService
             "token" => "",
             "qrcode" => true,
             "number" => $number,
-            "webhook" => "http://84.247.174.15:5678/webhook/15cea603-1568-4e01-bb9a-c1d2e7a04093",
+            "webhook" => $this->webHook,
             "webhook_by_events" => false,
             "webhook_base64" => true,
             "events" => [

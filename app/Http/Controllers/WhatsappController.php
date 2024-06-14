@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Finance\PaymentProcessController;
 use App\Services\WhatsappService;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class WhatsappController extends Controller
@@ -27,6 +25,12 @@ class WhatsappController extends Controller
         $qrCodeBase64 = '';
         $invalidphone = false;
         $serverError = false;
+
+        // Verificar o estado da instância
+        if (!$this->whatsappService->checkInstanceState()) {
+            $serverError = true;
+            return view('default.panel.user.whatsapp.index', compact('qrCodeBase64', 'invalidphone', 'serverError'));
+        }
 
         if ($validphone) {
             // Remover o caractere '+' do número de telefone
